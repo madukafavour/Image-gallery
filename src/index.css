@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+  user-select: none;
+  white-space: nowrap;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  background-color: #ffffff;
+  padding-top: 60px;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+  padding: 50px 100px;
+  /* margin-top: 50px; */
+}
+.searchfixed {
+  position: fixed;
+  background-color: #ffffff;
+  top: 0px;
+  left: 0;
+  right: 0;
+  height: 60px;
+  text-align: center;
+  padding-top: 20px;
+  padding: 0 8%;
+  height: 80px;
+  display: grid;
+  place-items: center;
+  z-index: 100;
+  box-shadow: 2px 2px 10px rgba(199, 56, 189, 0.6);
+}
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.searchBar {
+  padding-bottom: 5px;
+  display: flex;
+  /* max-width: 350px; */
+  /* margin: 0 auto; */
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  border-bottom: 1px solid rgb(199, 56, 189);
+  position: relative;
+}
+.logo h4 {
+  font-weight: 600;
+  font-size: 3rem;
+  font-family: cursive;}
+  
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.logo img {
+  object-fit: cover;
+  width: 50px;
+  border-radius: 50%;
+  object-position: center;
+}
+button {
+  color: #ffffff;
+  background-color: #850F8D;
+  font-weight: 600;
+  font-size: 1.4rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.search-md {
+  display: none;
+}
+button:hover {
+  opacity: 0.7;
+  transition: 0.5s ease-in-out;
+}
+input {
+  font-size: 1.9rem;
+}
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: stretch;
+  justify-content: center;
+}
+.imagecard {
+  width: 300px;
+  min-width: 300px;
+  background-color: #F8F9D7;
+  border-radius: 10px;
+  box-shadow: 
+    rgba(0, 0, 0, 0.1) 0 2px 2px,
+    rgba(0, 0, 0, 0.1) 0 4px 4px,
+    rgba(0, 0, 0, 0.1) 0 8px 8px,
+    rgba(0, 0, 0, 0.1) 0 16px 16px,
+    rgba(0, 0, 0, 0.1) 0 32px 32px,
+    rgba(0, 0, 0, 0.1) 0 64px 64px;
+}
+.imgcontainer {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px 10px 0 0;
+  background: #e0e0e0; 
+  position: relative;
+}
+.imgcontainer img {
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+.image-text {
+  padding: 20px;
+}
+.tags {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.tag-placeholder {
+  width: 30%;
+  height: 20px;
+  background: #e0e0e0;
+  border-radius: 20px;
+}
+.tags span {
+  background-color: #E49BFF;
+  color: #000000;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+h4 {
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: #850F8D;
+  margin: 0 0 5px;
+}
+.image-text p {
+  font-size: 1.4rem;
+}
+.nextbutton {
+  /* Removed to avoid overriding the button-container styles */
+}
+
+.text-placeholder {
+  width: 60%;
+  height: 20px;
+  background: #e0e0e0;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+.download-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  width: 30px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .searchfixed {
+    padding: 0 4%;
+    height: 70px;
+  }
+  .logo h4 {
+    font-weight: 600;
+    font-size: 2.4rem;
+  }
+  .search-lg {
+    display: none;
+  }
+  .search-md {
+    display: initial;
+    padding: 5px 10px;
+  }
+  input {
+    font-size: 1.6rem;
+  }
+}
+
+/* New styles for button container and buttons */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adjust the gap between buttons as needed */
+  margin-top: 20px; /* Adjust the margin as needed */
+}
+
+.prevbutton, .nextbutton {
+  color: #ffffff;
+  background-color: #850F8D;
+  font-weight: 600;
+  font-size: 1.4rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.prevbutton:hover, .nextbutton:hover {
+  opacity: 0.7;
+  transition: 0.5s ease-in-out;
+}
